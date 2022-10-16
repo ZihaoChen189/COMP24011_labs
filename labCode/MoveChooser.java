@@ -57,8 +57,8 @@ public class MoveChooser {
                 // According to lecture materials, the most classic part of the algorithm was designed here, 
                 // which was supported by a series of BF-recursive searches.
                 
-                if (alpha > beta) break; // PRUN!!!
-                // The node would be terminated when alpha > beta, which meant a better value would never be caught in this situation.
+                if (alpha >= beta) break; // PRUN!!!
+                // The node would be terminated when alpha >= beta, which meant a better value would never be caught in this situation.
             }
             return alpha;
         }
@@ -69,7 +69,7 @@ public class MoveChooser {
                 BoardState temp = board.deepCopy();
                 temp.makeLegalMove(move.x, move.y);
                 beta = Math.min(beta, alpha_beta(true, temp, searchDepth - 1, alpha, beta));
-                if (alpha > beta) break;  // PRUN!!!
+                if (alpha >= beta) break;  // PRUN!!!
             }
             return beta;
         }

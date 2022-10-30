@@ -154,9 +154,3 @@ def pmsList(m, pairList):
 # Debug
 if __name__ == '__main__':
     print("debug run...")
-    solns1 =Travellers([["olga", "2:30"]])
-    print(solns1)
-    solns2 = msqList(4,[[0,13],[1,12],[2,7]])
-    print(solns2)
-    solns3 = pmsList(4,[[0,13],[1,12],[2,7]])
-    print(solns3)
